@@ -1,59 +1,36 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+## Overview
+This application demonstrates an application written in PHP using the Laravel framework. It allows a site visitor to rate and review Things and to create new Things. The home page of the site lists all Things, ordered by rating (best to worst). From there, the user clicks on a Thing name to see all the reviews for that Thing, and then can click on an reviewer’s name to see just that review.
+The application demonstrates various types of front-end and back-end validation. It assumes that the reviewer is already logged in somehow to the application.
+A demo is available at http://ec2-35-153-175-172.compute-1.amazonaws.com/.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Tests
+(Behavior Driven Development style)
 
-## About Laravel
+1. As a reviewer, in order to review a Thing, I need to create a new review for a Thing
+2. As a reviewer, in order to review a Thing that doesn't exist in the system (uniqueness based on Thing name only), I need to be able to create Things
+3. As a reviewer, in order to edit one of my reviews, I can navigate to an edit screen for a single review from the list of my reviews
+4. As an administer, in order to help with content management, I need all reviews to be limited to 2000 characters
+5. As a site visitor, in order to see a list of Things and the related reviews, I need an easy-to-use listing of all Things
+6. As a site visitor, in order to find a Thing that I would be interested in, I need the Thing list to be sorted by rating
+7. As an administer, in order to automatically show the edited review instead of the original, ensure all views show the edited/summarized reviews when applicable
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Future / Wish List Features
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+1. As a reviewer, in order to retract any of my reviews, I need to be able to delete a review I created
+1. As a reviewer, in order to see which Things I've already reviewed, I need to see a list of all my own reviews only
+1. As a reviewer, in order to edit one of my reviews, I can navigate to an edit screen for a single review from the list of my reviews 
+1. As an administer, in order to prevent fraud, I need the application to enforce a deadline after which a review must not be able to edit an existing review
+1. As an administer, in order to prevent fraud, I need the application to enforce a minimum time window between each review submission by the same reviewer
+1. As an administer, in order to help with content management, I need all reviews to be limited to 2000 characters
+1. As an administer, in order to ensure Things aren't inappropriately deleted, I need the application to only allow deleting a Thing if there are no reviews for it and ONLY allow deletion by the original creator
+1. As a site visitor, in order to find a Thing that I would be interested in, I need the Thing list to be sortable by location
+1. As a site visitor, in order to find a Thing that I would be interested in, I need the Thing list to be sortable by dates
+1. As a site visitor, in order to find a Thing that I would be interested in, I need the Thing list to be sortable by rating
+1. As a site visitor, in order to see if a review has been edited or not, I need to see some textual indicator of such
+1. As a reviewer OR site visitor, in order to find a current Thing, I need the Thing list to be filterable by whether the Thing has ended or not
+  - This helps focus social interest/excitement only on relevant Things
+1. As an administer, in order to increase SEO and usability, I need urls to specific Things to use a slug instead of an id
 
-## Learning Laravel
+Made with <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
