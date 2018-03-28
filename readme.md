@@ -29,8 +29,8 @@ A demo is available at http://ec2-35-153-175-172.compute-1.amazonaws.com/.
 1. As a site visitor, in order to find a Thing that I would be interested in, I need the Thing list to be sortable by rating
 1. As a site visitor, in order to see if a review has been edited or not, I need to see some textual indicator of such
 1. As a reviewer OR site visitor, in order to find a current Thing, I need the Thing list to be filterable by whether the Thing has ended or not
-  - This helps focus social interest/excitement only on relevant Things
+    - This helps focus social interest/excitement only on relevant Things
 1. As an administer, in order to increase SEO and usability, I need urls to specific Things to use a slug instead of an id
 
-Made with <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<p align="center">Made with<br><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
