@@ -1,7 +1,6 @@
 ## Overview
 This application demonstrates an application written in PHP using the Laravel framework. It allows a site visitor to rate and review Things and to create new Things. The home page of the site lists all Things, ordered by rating (best to worst). From there, the user clicks on a Thing name to see all the reviews for that Thing, and then can click on an reviewer’s name to see just that review.
 The application demonstrates various types of front-end and back-end validation. It assumes that the reviewer is already logged in somehow to the application.
-A demo is available at http://ec2-35-153-175-172.compute-1.amazonaws.com/.
 
 ## Tests
 (Behavior Driven Development style)
